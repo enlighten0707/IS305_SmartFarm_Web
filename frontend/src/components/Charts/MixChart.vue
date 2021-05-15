@@ -54,7 +54,7 @@ export default {
       this.chart.setOption({
         backgroundColor: '#344b58',
         title: {
-          text: 'statistics',
+          // text: 'statistics',
           x: '20',
           top: '20',
           textStyle: {
