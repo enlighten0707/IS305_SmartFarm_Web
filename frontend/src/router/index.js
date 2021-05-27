@@ -70,31 +70,31 @@ export const constantRoutes = [
     component: () => import('@/views/error-page/401'),
     hidden: true
   },
-  // {
-  //   path: '/',
-  //   component: Layout,
-  //   redirect: '/dashboard',
-  //   children: [
-  //     {
-  //       path: 'dashboard',
-  //       component: () => import('@/views/dashboard/index'),
-  //       name: '主控面板',
-  //       meta: { title: '主控面板', icon: 'dashboard', affix: true }
-  //     }
-  //   ]
-  // },
   {
-    path: '/greenhouse',
+    path: '/',
     component: Layout,
+    redirect: '/greenhouse',
     children: [
       {
-        path: 'index',
+        path: 'greenhouse',
         component: () => import('@/views/greenhouse/index'),
         name: '大棚监控',
         meta: { title: '大棚监控', icon: 'table', affix: true }
       }
     ]
   },
+  // {
+  //   path: '/greenhouse',
+  //   component: Layout,
+  //   children: [
+  //     {
+  //       path: 'index',
+  //       component: () => import('@/views/greenhouse/index'),
+  //       name: '大棚监控',
+  //       meta: { title: '大棚监控', icon: 'table', affix: true }
+  //     }
+  //   ]
+  // },
   {
     path: '/documentation',
     component: Layout,
