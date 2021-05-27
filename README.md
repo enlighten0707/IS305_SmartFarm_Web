@@ -5,6 +5,7 @@ A smart farm platform combining **Web** and **Embedded System**.
 
 ## Getting started
 ```shell
+# 前端
 # first download and install node.js
 # enter the project directory
 cd fronted
@@ -14,4 +15,7 @@ npm install
 
 # develop
 npm run dev
+
+# 后端
+python manage.py runserver
 ```
