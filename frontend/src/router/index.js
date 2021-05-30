@@ -79,7 +79,7 @@ export const constantRoutes = [
         path: 'greenhouse',
         component: () => import('@/views/greenhouse/index'),
         name: '大棚监控',
-        meta: { title: '大棚监控', icon: 'table', affix: true }
+        meta: { title: '大棚监控', icon: 'eye', affix: true }
       }
     ]
   },
@@ -108,18 +108,6 @@ export const constantRoutes = [
     ]
   },
   {
-    path: '/peoples',
-    component: Layout,
-    children: [
-      {
-        path: 'index',
-        component: () => import('@/views/peoples/index'),
-        name: '工人排班',
-        meta: { title: '工人排班', icon: 'peoples', affix: true }
-      }
-    ]
-  },
-  {
     path: '/vehicle',
     component: Layout,
     children: [
@@ -128,6 +116,30 @@ export const constantRoutes = [
         component: () => import('@/views/vehicle/index'),
         name: '无人车工作',
         meta: { title: '无人车工作', icon: 'component', affix: true }
+      }
+    ]
+  },
+  {
+    path: '/crop',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/crop/index'),
+        name: '作物情况',
+        meta: { title: '作物情况', icon: 'table', affix: true }
+      }
+    ]
+  },
+  {
+    path: '/peoples',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/peoples/index'),
+        name: '工人排班',
+        meta: { title: '工人排班', icon: 'peoples', affix: true }
       }
     ]
   },
