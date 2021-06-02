@@ -73,13 +73,25 @@ export const constantRoutes = [
   {
     path: '/',
     component: Layout,
-    redirect: '/greenhouse',
+    redirect: '/monitor',
     children: [
       {
-        path: 'greenhouse',
-        component: () => import('@/views/greenhouse/index'),
+        path: 'monitor',
+        component: () => import('@/views/monitor/index'),
         name: '大棚监控',
         meta: { title: '大棚监控', icon: 'eye', affix: true }
+      }
+    ]
+  },
+  {
+    path: '/greenhouse',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/greenhouse/index'),
+        name: '大棚环境',
+        meta: { title: '大棚环境', icon: 'star', affix: true }
       }
     ]
   },
