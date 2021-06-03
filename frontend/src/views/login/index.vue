@@ -59,8 +59,11 @@
     <el-dialog id= "register_id" title="Register" :visible.sync="showDialog">
       <div style ="float:left;size:90px;color:black;margin:10px;">your id:</div>
       <input type="text" v-model="msg">
-      <p></p>
-      <el-button :loading="loading" type="primary" style="width:35%;margin-bottom:10px;margin-left:10px;" @click.native.prevent="submit">submit</el-button>
+      <div id = "fp2" v-if = "judge">
+        <div style = "float:left;position:absolute;color:black;top:100px;left:10px;">your photo:</div>
+        <img :src = "'data:image/png;base64,'+imgStr" alt="图片未上传" style="width:200px;height:200px;margin:10px;" id = "img">
+      </div>
+      <el-button :loading="loading" type="primary" style="width:35%;margin-bottom:10px;margin-left:10px;" @click.native.prevent="submit" v-if = "judge2">submit</el-button>
       <div style = "margin-left:10px;color:red;font-weight:bold">{{msg2}}</div>
     </el-dialog>
   </div>
@@ -112,7 +115,11 @@ export default {
       redirect: undefined,
       otherQuery: {},
       msg:'',
-      msg2:''
+      msg2:'',
+      imgStr:'',
+      //f_img:require("/home/zxk/Desktop/IS305_SmartFarm_Web/FaceRecog/face/face_r.jpg"),
+      judge:false,
+      judge2:true
     }
   },
   watch: {
@@ -159,6 +166,9 @@ export default {
       //console.log(this.msg)
       this.loading = true
       var dtback = -1
+      var dtimg = ""
+      var fp = document.getElementById("fp2")
+      console.log(fp)
       if (this.msg==="") {
         this.loading = false
         this.msg2 = "your id shouldn't be blank."
@@ -171,18 +181,30 @@ export default {
       })
       .then(function (response){
           dtback = response.data[0].value
-          console.log(response.data[0].value);
+          dtimg = response.data[0].pic.toString()
+          console.log(dtimg)
         }).catch(function(error){
           console.log(error);
         });
+      //setTimeout(() => {
+      //  this.judge = true
+      //}, 1000);
       //document.getElementById("register_id").getElementsByClassName("el-dialog__headerbtn").click
       setTimeout(() => {
         this.loading = false
         if (dtback === 1) {
-          this.msg2 = "register succeed! website will redirect in two seconds."
+          //var fp = document.getElementById("fp2")
+          //var img = document.getElementById("img")
+          //fp.setAttribute("display", "inline")
+          //img.setAttribute("src", f_img)
+          this.judge = true
+          this.judge2 =false
+          //this.imgStr = "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg=="
+          this.imgStr = dtimg.slice(0,-1)
+          this.msg2 = "register succeed! website will redirect in five seconds."
           setTimeout(() => {
             location.reload()
-          }, 2000);
+          }, 5000);
         }
         else {
           this.msg2 = "register failed! Please try again."

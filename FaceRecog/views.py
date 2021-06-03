@@ -79,7 +79,7 @@ def search(picture,access_token):#识别已有图片
     if rp:
         #print(rp.json())
         if rp.json()['error_code']:
-            print(rp.json())
+            #print(rp.json())
             return ""
         user_list = rp.json()['result']['user_list']
 #            print(user_list)
@@ -111,9 +111,10 @@ def shot_and_register(name,picture,access_token):#拍照并注册
     rp = requests.post(request_url, data=params, headers=headers)
     #print(rp.json())
     if rp.json()['error_msg'] == "SUCCESS":
-        return True
+        print(pic_base64)
+        return pic_base64
     else:
-        return False
+        return ""
 
 def initialize():#初始化人脸库令牌
     # client_id 为官网获取的AK， client_secret 为官网获取的SK
@@ -146,13 +147,13 @@ def login(request):
 
 def register(request):
     id = request.GET.get('id')
-    id_p = id + ".jpg"
+    #id_p = id + ".jpg"
     token = initialize()
-    result = shot_and_register(id,id_p,token)
+    result = shot_and_register(id,"face_r.jpg",token)
     if result:
-        data =[{'value':1}]
+        data =[{'value':1,"pic":result}]
     else:
-        data =[{'value':0}]
+        data =[{'value':0,"pic":""}]
     data = json.dumps(data)
     rpd = HttpResponse(data, content_type='application/json')
     return rpd
