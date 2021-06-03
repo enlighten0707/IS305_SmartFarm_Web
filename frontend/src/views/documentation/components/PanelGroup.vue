@@ -2,10 +2,10 @@
 <div>
   <el-row :gutter="60" class="panel-group">
     <el-col :xs="12" :sm="12" :lg="6" class="card-panel-col">
-      <div class="card-panel" @click="handleSetLineChartData('temp')">
+      <div class="card-panel" @click="handleSetLineChartData('price')">
         <div class="card-panel-icon-wrapper icon-people">
           <!-- <i class="el-icon-eleme" class-name="card-panel-icon"/> -->
-          <svg-icon icon-class="temp" class-name="card-panel-icon" />
+          <svg-icon icon-class="price" class-name="card-panel-icon" />
         </div>
         <div class="card-panel-description">
           <div class="card-panel-text">
@@ -19,9 +19,9 @@
       </div>
     </el-col>
     <el-col :xs="12" :sm="12" :lg="6" class="card-panel-col">
-      <div class="card-panel" @click="handleSetLineChartData('light')">
+      <div class="card-panel" @click="handleSetLineChartData('change_num')">
         <div class="card-panel-icon-wrapper icon-message">
-          <svg-icon icon-class="light" class-name="card-panel-icon" />
+          <svg-icon icon-class="change_num" class-name="card-panel-icon" />
         </div>
         <div class="card-panel-description">
           <div class="card-panel-text">
@@ -35,9 +35,9 @@
       </div>
     </el-col>
     <el-col :xs="12" :sm="12" :lg="6" class="card-panel-col">
-      <div class="card-panel" @click="handleSetLineChartData('gas')">
+      <div class="card-panel" @click="handleSetLineChartData('change_ratio')">
         <div class="card-panel-icon-wrapper icon-money">
-          <svg-icon icon-class="gas" class-name="card-panel-icon" />
+          <svg-icon icon-class="change_ratio" class-name="card-panel-icon" />
         </div>
         <div class="card-panel-description">
           <div class="card-panel-text">

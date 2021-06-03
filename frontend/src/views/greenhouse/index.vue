@@ -22,27 +22,27 @@ import BoxCard from './components/BoxCard'
 
 const lineChartData = {
   temp: {
-    expectedData: [100, 120, 161, 134, 105, 160, 165],
+    expectedData: [20.2, 22.1, 23.4, 24.5, 24.9, 25.3, 25.8],
     dim: '℃',
   },
   light: {
-    expectedData: [200, 192, 120, 144, 160, 130, 140],
+    expectedData: [50.2, 48.2, 49.3, 50.3, 48.2, 50.1, 52.8],
     dim: '%',
   },
   gas: {
-    expectedData: [80, 100, 121, 104, 105, 90, 100],
+    expectedData: [20.11, 18.23, 19.87, 19.99, 20.01, 18.93, 18.24],
     dim: '%',
   },
   humidity: {
-    expectedData: [130, 140, 141, 142, 145, 150, 160],
+    expectedData: [72, 64, 70, 65, 67, 72, 70],
     dim:'%',
   },
   humidity_soil: {
-    expectedData: [1230, 140, 141, 142, 145, 150, 160],
+    expectedData: [0.44, 0.45, 0.42, 0.47, 0.44, 0.45, 0.46],
     dim:'%',
   },
   rain: {
-    expectedData: [130, 140, 141, 142, 145, 150, 160],
+    expectedData: [0.30, 0.33, 0.28, 0.28, 0.33, 0.33, 0.34],
     dim:'%',
   }
 }

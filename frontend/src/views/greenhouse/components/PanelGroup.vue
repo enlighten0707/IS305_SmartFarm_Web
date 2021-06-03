@@ -12,7 +12,7 @@
             大    棚    温    度
           </div>
           <div class="card-panel-num">
-            24.7℃
+            {{temp}}℃
           </div>
           <!-- <count-to :start-val="0" :end-val="102400" :duration="2600" class="card-panel-num" /> -->
         </div>
@@ -28,7 +28,7 @@
             光    照    强    度
           </div>
           <div class="card-panel-num">
-            61.91%
+            {{light}}%
           </div>
           <!-- <count-to :start-val="0" :end-val="81212" :duration="3000" class="card-panel-num" /> -->
         </div>
@@ -44,7 +44,7 @@
             CO    浓    度
           </div>
           <div class="card-panel-num">
-            16.02%
+            {{gas}}%
           </div>
           <!-- <count-to :start-val="0" :end-val="9280" :duration="3200" class="card-panel-num" /> -->
         </div>
@@ -75,7 +75,7 @@
             室    内    湿    度
           </div>
           <div class="card-panel-num">
-            74%
+            {{humidity}}%
           </div>
           <!-- <count-to :start-val="0" :end-val="102400" :duration="2600" class="card-panel-num" /> -->
         </div>
@@ -91,7 +91,7 @@
             土    壤    湿    度
           </div>
           <div class="card-panel-num">
-            0.49%
+            {{humidity_soil}}%
           </div>
           <!-- <count-to :start-val="0" :end-val="81212" :duration="3000" class="card-panel-num" /> -->
         </div>
@@ -107,7 +107,7 @@
             降    水    量
           </div>
           <div class="card-panel-num">
-            0.56mm
+            {{rain}}mm
           </div>
           <!-- <count-to :start-val="0" :end-val="9280" :duration="3200" class="card-panel-num" /> -->
         </div>
@@ -127,6 +127,16 @@ export default {
   methods: {
     handleSetLineChartData(type) {
       this.$emit('handleSetLineChartData', type)
+    }
+  },
+  data() {
+    return {
+      temp:25.8,
+      light:52.8,
+      gas:18.24,
+      humidity:70.0,
+      rain:0.34,
+      humidity_soil:0.46,
     }
   }
 }

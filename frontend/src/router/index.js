@@ -96,6 +96,18 @@ export const constantRoutes = [
     ]
   },
   // {
+  //   path: '/greenhouse_',
+  //   component: Layout,
+  //   children: [
+  //     {
+  //       path: 'index',
+  //       component: () => import('@/views/greenhouse1/index'),
+  //       name: '大棚环境',
+  //       meta: { title: '大棚环境', icon: 'star', affix: true }
+  //     }
+  //   ]
+  // },
+  // {
   //   path: '/greenhouse',
   //   component: Layout,
   //   children: [
@@ -132,18 +144,6 @@ export const constantRoutes = [
     ]
   },
   {
-    path: '/crop',
-    component: Layout,
-    children: [
-      {
-        path: 'index',
-        component: () => import('@/views/crop/index'),
-        name: '作物情况',
-        meta: { title: '作物情况', icon: 'table', affix: true }
-      }
-    ]
-  },
-  {
     path: '/peoples',
     component: Layout,
     children: [
@@ -155,6 +155,19 @@ export const constantRoutes = [
       }
     ]
   },
+  {
+    path: '/crop',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/crop/index'),
+        name: '作物情况',
+        meta: { title: '作物情况', icon: 'table', affix: true }
+      }
+    ]
+  },
+  
   // { path: '*', redirect: '/404', hidden: true }
   // {
   //   path: '/guide',
