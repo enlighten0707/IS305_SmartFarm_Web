@@ -265,8 +265,8 @@ export default {
       var fun2 = async function(){
         await fun1()
       }
-      // fun2()
-      facetoken=1
+      //fun2()
+      facetoken = 1
       setTimeout(() => {
       //console.log(facetoken)
       if (facetoken === 1) { this.loginForm.username = 'admin' }

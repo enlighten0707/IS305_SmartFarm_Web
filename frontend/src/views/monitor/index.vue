@@ -43,10 +43,6 @@
             <img :src="require('@/assets/monitor_videos/monitor_04.gif')">
           </div>
         </el-card>
-
-        <!-- <el-card class="box-card">
-            <img :src="require('@/assets/monitor_videos/monitor_04.gif')">
-        </el-card> -->
       </el-col>
     </el-row>
     </div>
@@ -54,13 +50,29 @@
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      imgUrl:require('@/assets/monitor_videos/monitor_01.gif')
-    }
-  }
-}  
+// export default {
+//   data() {
+//     return {
+//       imgUrl:require('@/assets/monitor_videos/monitor_01.gif')
+//     }
+//   },
+//   methods: {
+//     give_data(type, data) {
+//           this.barChartData.name = data.name;
+//     },
+//     handleSetBarChartData(type){
+//       axios({
+//          method: 'get',
+//          url: 'http://127.0.0.1:8000/get_videos/',
+//          responseType: 'json'
+//        })
+//       .then((response)=>(
+//         console.log(response.data),
+//         this.give_data(type, response.data)
+//       ))
+//     }
+//   },
+// }  
 </script>
 
 <style>
