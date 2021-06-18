@@ -38,8 +38,6 @@ export default {
 <style>
 .img{
     margin-left:40px;
-    /* width: 300px;
-    height: 150px; */
 }
 .el_card{
     padding: 0;

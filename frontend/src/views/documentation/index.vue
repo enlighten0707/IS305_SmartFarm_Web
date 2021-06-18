@@ -13,7 +13,6 @@ import PanelGroup from './components/PanelGroup'
 import LineChart from './components/LineChart'
 import axios from 'axios'
 
-import axios from 'axios'
 export default {
   name: 'DashboardAdmin',
   components: {
@@ -37,17 +36,17 @@ export default {
           switch(type){
           case 'price':
             this.barChartData.expectedData = data.price;
-            this.barChartData.dim = '农作物价格';
+            this.barChartData.dim = '农作物价格/元';
             this.barChartData.color = 'pink';
             break;
           case 'change_num':
             this.barChartData.expectedData = data.change_num;
-            this.barChartData.dim = '涨跌数值';
+            this.barChartData.dim = '涨跌数值/%';
             this.barChartData.color = 'blue';
             break;
           case 'change_ratio':
             this.barChartData.expectedData = data.change_ratio;
-            this.barChartData.dim = '涨跌幅度';
+            this.barChartData.dim = '涨跌幅度/%';
             this.barChartData.color = 'green';
             break;
           case 'trading_volumes':
@@ -64,7 +63,7 @@ export default {
          responseType: 'json'
        })
       .then((response)=>(
-        console.log(response.data),
+        // console.log(response.data),
         this.give_data(type, response.data)
       ))
     }

@@ -220,9 +220,10 @@ export default {
 
       .card-panel-text {
         float: left;
-        line-height: 23px;
+        line-height: 18px;
         color: rgba(0, 0, 0, 0.45);
-        font-size: 23px;
+        font-size: 18px;
+        // font-size: 23px;
         // margin-bottom: 12px;
         margin-right: 30px;
       }
@@ -230,10 +231,10 @@ export default {
       .card-panel-num {
         width: 80px;
         float: right;
-        font-size: 23px;
+        font-size: 18px;
         // margin-bottom: 15px;
         margin-right: 30px;
-        line-height: 23px;
+        line-height: 18px;
       }
     }
   }
