@@ -13,7 +13,6 @@ import PanelGroup from './components/PanelGroup'
 import LineChart from './components/LineChart'
 import axios from 'axios'
 
-import axios from 'axios'
 export default {
   name: 'DashboardAdmin',
   components: {
