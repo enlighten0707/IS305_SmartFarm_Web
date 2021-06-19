@@ -166,7 +166,7 @@ export default {
 
       .card-panel-text {
         float: left;
-        line-height: 23px;
+        line-height: 18px;
         color: rgba(0, 0, 0, 0.45);
         font-size: 23px;
         margin-right: 30px;
@@ -177,7 +177,7 @@ export default {
         float: right;
         font-size: 23px;
         margin-right: 30px;
-        line-height: 23px;
+        line-height: 18px;
       }
     }
   }
