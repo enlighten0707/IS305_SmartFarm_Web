@@ -17,8 +17,3 @@ class Environment_monitor(models.Model):
     month = models.IntegerField(default = 0)
     day = models.IntegerField(default = 0)
     hour = models.IntegerField(default = 0)
-
-class Crop_maturity(models.Model):
-    crop_name = models.CharField(max_length = 10, default = '')
-    maturity = models.FloatField(default = 0)
-    time = models.DateTimeField(default = timezone.now)
