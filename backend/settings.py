@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'FaceRecog',
     'ProdInfo',
     'Monitor',
+    'CropMaturity',
 ]
 
 MIDDLEWARE = [

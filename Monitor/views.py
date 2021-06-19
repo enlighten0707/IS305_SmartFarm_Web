@@ -3,7 +3,6 @@ import json
 from datetime import datetime
 
 import csv
-import pandas as pd
 
 from .models import Environment_monitor
 
