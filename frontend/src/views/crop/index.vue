@@ -1,5 +1,6 @@
 <template>
 <div class="dashboard-editor-container">
+  <!-- 界面装饰元素 -->
   <el-row class="demo-avatar demo-basic">
     <el-col :span="3" :offset="3">
       <div class="demo-basic--circle">
@@ -28,6 +29,7 @@
     </el-col>
   </el-row>
 
+  <!-- 上传文件和展示结果 -->
   <el-col :span="12" :offset="9">
     <el-upload
       class="upload-demo"
@@ -60,29 +62,19 @@ import axios from 'axios'
 export default {
   data() {
     return {
-      imageUrl:"",
     }
   },
-  // mounted () {
-  //   console.log(document.getElementById('maturity_rate').innerText)
-  // },
-
   methods:{
     handleAvatarSuccess () {
-      console.log(1)
+      // handleAvatarSuccess: 上传文件成功后，向后端请求成熟度检测结果
       axios({
          method: 'get',
          url: 'http://127.0.0.1:8000/CropMaturity/test_maturity/',
-        //  responseType: 'json'
        })
       .then((response)=>(
         console.log(response.data),
         document.getElementById('maturity_rate').innerText = "成熟率：" + response.data + "%"
       ))
-
-      // this.$axios.get('http://127.0.0.1:8000/CropMaturity/test_maturity').then(res => {
-      //   console.log(res.data)
-      // })
     },
     beforeAvatarUpload (file) {
       // beforeAvatarUpload: 上传图片的操作，包括文件类型、大小检查等
@@ -91,9 +83,6 @@ export default {
         this.$message.error('The size of the uploaded file cannot exceed 1MB!')
       }
       return sLt1M
-    },
-    handleChange(file, fileList) {
-      this.fileList = fileList.slice(-3);
     }
   }
 }  

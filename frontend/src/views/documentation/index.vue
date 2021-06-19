@@ -57,13 +57,13 @@ export default {
       }
     }, //give_data
     handleSetBarChartData(type){
+      // handleSetBarChartData：向后端数据库请求数据
       axios({
         method: 'get',
         url: 'http://127.0.0.1:8000/ProdInfo/get_data/',
         responseType: 'json'
       })
       .then((response)=>(
-        // console.log(response.data),
         this.give_data(type, response.data)
       ))
     } // handleSetBarChartData
