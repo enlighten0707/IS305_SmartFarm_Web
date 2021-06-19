@@ -4,7 +4,7 @@ from datetime import datetime
 
 def saving_data():
     # delete all data
-    # Price.objects.all().delete()
+    Price.objects.all().delete()
 
     products_list = main()[1:] # 剔除表头
 
