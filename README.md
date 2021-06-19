@@ -12,19 +12,19 @@
 
 ## 功能实现与界面展示
 
-<img src="C:\Users\dell\Documents\Code\IS305_SmartFarm_Web\img\1.png" alt="1" style="zoom:30%;" />
+<img src=".\img\1.png" alt="1" style="zoom:30%;" />
 
-<img src="C:\Users\dell\Documents\Code\IS305_SmartFarm_Web\img\2.png" alt="2" style="zoom:30%;" />
+<img src=".\img\2.png" alt="2" style="zoom:30%;" />
 
-<img src="C:\Users\dell\Documents\Code\IS305_SmartFarm_Web\img\3.png" alt="3" style="zoom:30%;" />
+<img src=".\img\3.png" alt="3" style="zoom:30%;" />
 
-<img src="C:\Users\dell\Documents\Code\IS305_SmartFarm_Web\img\4.PNG" alt="4" style="zoom:30%;" />
+<img src=".\img\4.PNG" alt="4" style="zoom:30%;" />
 
-<img src="C:\Users\dell\Documents\Code\IS305_SmartFarm_Web\img\5.png" alt="5" style="zoom:30%;" />
+<img src=".\img\5.png" alt="5" style="zoom:30%;" />
 
-<img src="C:\Users\dell\Documents\Code\IS305_SmartFarm_Web\img\6.png" alt="6" style="zoom:30%;" />
+<img src=".\img\6.png" alt="6" style="zoom:30%;" />
 
-<img src="C:\Users\dell\Documents\Code\IS305_SmartFarm_Web\img\7.PNG" alt="7" style="zoom:30%;" />
+<img src=".\img\7.PNG" alt="7" style="zoom:30%;" />
 
 ## 运行步骤
 
