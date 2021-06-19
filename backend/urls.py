@@ -20,7 +20,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('FaceRecog/', include('FaceRecog.urls')),
     path('ProdInfo/', include('ProdInfo.urls')),
-    path('Monitor/', include('Monitor.urls')),
     path('CropMaturity/', include('CropMaturity.urls'))
 
 ]

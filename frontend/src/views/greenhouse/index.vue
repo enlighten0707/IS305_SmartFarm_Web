@@ -20,6 +20,7 @@ import TransactionTable from './components/TransactionTable'
 import TodoList from './components/TodoList'
 import BoxCard from './components/BoxCard'
 
+// 这里暂时用模拟数据代替
 const lineChartData = {
   temp: {
     expectedData: [20.2, 22.1, 23.4, 24.5, 24.9, 25.3, 25.8],

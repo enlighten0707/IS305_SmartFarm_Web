@@ -26,10 +26,12 @@ def get_maturity_rate(valid_directory="./test"):
     batch_size = 8
     num_classes = 1
 
+    # 读取需要测试的图片文件
     valid_datasets = datasets.ImageFolder(valid_directory,transform=test_valid_transforms)
     valid_data_size = len(valid_datasets)
     valid_data = torch.utils.data.DataLoader(valid_datasets, batch_size=batch_size, shuffle=False)
 
+    # 初始化网络
     resnet152 = resnet50(pretrained=True)
     for param in resnet152.parameters():
         param.requires_grad = False
@@ -43,6 +45,7 @@ def get_maturity_rate(valid_directory="./test"):
         nn.LogSoftmax(dim=1)
     )
 
+    # 导入预先训练好的模型
     ckpt = torch.load("./CropMaturity/trained_models/26.pth", map_location=torch.device('cpu'))
     resnet152.load_state_dict(ckpt)
     
@@ -50,6 +53,7 @@ def get_maturity_rate(valid_directory="./test"):
     device =  torch.device("cuda:0" if torch.cuda.is_available() else "cpu")#若有gpu可用则用gpu
     model.eval()
 
+    # 根据结果，计算成熟率
     maturity = []
 
     for j, (inputs, labels) in enumerate(valid_data):
@@ -65,6 +69,3 @@ def get_maturity_rate(valid_directory="./test"):
     maturity_rate = np.sum(maturity)/len(maturity)
 
     return maturity_rate
-
-# maturity_rate = get_maturity_rate()
-# print(maturity_rate)

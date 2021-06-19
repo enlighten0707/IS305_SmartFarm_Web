@@ -4,11 +4,13 @@ import zipfile
 from .test_maturity import get_maturity_rate
 import numpy as np
 import glob
+from django.views.decorators.csrf import csrf_exempt  
 
-# Create your views here.
+@csrf_exempt
+
 def upload(request):
     '''
-    上传图片并保存到当前目录下，便于后续处理；同时返回该图片数据，便于在页面上显示已经上传的图片
+    上传压缩文件并保存到Data目录下，并解压缩
     '''
     file_list = request.FILES.getlist('file')
     file = file_list[0]
@@ -25,7 +27,9 @@ def upload(request):
 
     
 def test_maturity(request):
-
+    '''
+    根据图片检测作物成熟度，并返回给前端
+    '''
     maturity_rate = get_maturity_rate("./CropMaturity/Data")
     maturity_rate = np.round(100*maturity_rate,2)
 

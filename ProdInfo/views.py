@@ -6,6 +6,9 @@ import os
 from .models import Price
 
 from .save_data import saving_data
+from django.views.decorators.csrf import csrf_exempt  
+
+@csrf_exempt
 
 def get_data(request):
     saving_data()
